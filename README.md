@@ -28,7 +28,7 @@ This project simulates an enterprise-level booking platform where users can brow
 
 ## 🛠 Tech Stack
 
-- Java
+- Java 21
 - Spring Boot
 - Spring Security
 - JWT Authentication
