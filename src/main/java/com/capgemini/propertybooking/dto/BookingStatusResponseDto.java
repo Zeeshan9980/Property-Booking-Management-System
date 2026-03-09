@@ -1,0 +1,13 @@
+package com.capgemini.propertybooking.dto;
+
+import com.capgemini.propertybooking.enums.BookingStatus;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class BookingStatusResponseDto {
+    private BookingStatus bookingStatus;
+}
