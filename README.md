@@ -39,98 +39,99 @@ This project simulates an enterprise-level booking platform where users can brow
 - Stripe Payment Gateway
 
 ---
+
 ## 📡 API Endpoints
 
 ### Authentication
 
-POST /api/v1/auth/signup  
+POST /auth/signup  
 Register a new user.
 
-POST /api/v1/auth/login  
+POST /auth/login  
 Authenticate user and generate JWT token.
 
 ---
 
 ### Users
 
-GET /api/v1/users/profile  
+GET /users/profile  
 Get logged-in user details.
 
 ---
 
 ### Hotels (Admin)
 
-POST /api/v1/hotels  
+POST /hotels  
 Create a new hotel.
 
-PUT /api/v1/hotels/{hotelId}  
+PUT /hotels/{hotelId}  
 Update hotel details.
 
-DELETE /api/v1/hotels/{hotelId}  
+DELETE /hotels/{hotelId}  
 Delete hotel.
 
-GET /api/v1/hotels/{hotelId}  
+GET /hotels/{hotelId}  
 Get hotel details.
 
 ---
 
 ### Browse Hotels
 
-GET /api/v1/browse/hotels  
-Browse/search available hotels.
+GET /browse/hotels  
+Browse available hotels.
 
-GET /api/v1/browse/hotels/{hotelId}/rooms  
-Get available rooms for a hotel.
+GET /browse/hotels/{hotelId}/rooms  
+Get available rooms.
 
 ---
 
 ### Rooms (Admin)
 
-POST /api/v1/admin/rooms  
+POST /admin/rooms  
 Create a room.
 
-PUT /api/v1/admin/rooms/{roomId}  
+PUT /admin/rooms/{roomId}  
 Update room details.
 
-DELETE /api/v1/admin/rooms/{roomId}  
+DELETE /admin/rooms/{roomId}  
 Delete room.
 
 ---
 
 ### Inventory
 
-POST /api/v1/inventory  
+POST /inventory  
 Create room inventory.
 
-GET /api/v1/inventory/{roomId}  
+GET /inventory/{roomId}  
 Check room availability.
 
 ---
 
 ### Bookings
 
-POST /api/v1/bookings  
-Create a new booking.
+POST /bookings  
+Create booking.
 
-GET /api/v1/bookings/{bookingId}  
+GET /bookings/{bookingId}  
 Get booking details.
 
-GET /api/v1/bookings/user  
+GET /bookings/user  
 Get bookings of logged-in user.
 
 ---
 
 ### Payments
 
-POST /api/v1/checkout  
+POST /checkout  
 Create Stripe checkout session.
 
-POST /api/v1/webhook  
-Handle Stripe payment webhook events.
+POST /webhook  
+Handle Stripe payment webhook.
 
 API testing was performed using Postman.
 
----
+----
 
 ## 🏗 Architecture
 
