@@ -39,6 +39,98 @@ This project simulates an enterprise-level booking platform where users can brow
 - Stripe Payment Gateway
 
 ---
+## 📡 API Endpoints
+
+### Authentication
+
+POST /api/v1/auth/signup  
+Register a new user.
+
+POST /api/v1/auth/login  
+Authenticate user and generate JWT token.
+
+---
+
+### Users
+
+GET /api/v1/users/profile  
+Get logged-in user details.
+
+---
+
+### Hotels (Admin)
+
+POST /api/v1/hotels  
+Create a new hotel.
+
+PUT /api/v1/hotels/{hotelId}  
+Update hotel details.
+
+DELETE /api/v1/hotels/{hotelId}  
+Delete hotel.
+
+GET /api/v1/hotels/{hotelId}  
+Get hotel details.
+
+---
+
+### Browse Hotels
+
+GET /api/v1/browse/hotels  
+Browse/search available hotels.
+
+GET /api/v1/browse/hotels/{hotelId}/rooms  
+Get available rooms for a hotel.
+
+---
+
+### Rooms (Admin)
+
+POST /api/v1/admin/rooms  
+Create a room.
+
+PUT /api/v1/admin/rooms/{roomId}  
+Update room details.
+
+DELETE /api/v1/admin/rooms/{roomId}  
+Delete room.
+
+---
+
+### Inventory
+
+POST /api/v1/inventory  
+Create room inventory.
+
+GET /api/v1/inventory/{roomId}  
+Check room availability.
+
+---
+
+### Bookings
+
+POST /api/v1/bookings  
+Create a new booking.
+
+GET /api/v1/bookings/{bookingId}  
+Get booking details.
+
+GET /api/v1/bookings/user  
+Get bookings of logged-in user.
+
+---
+
+### Payments
+
+POST /api/v1/checkout  
+Create Stripe checkout session.
+
+POST /api/v1/webhook  
+Handle Stripe payment webhook events.
+
+API testing was performed using Postman.
+
+---
 
 ## 🏗 Architecture
 
