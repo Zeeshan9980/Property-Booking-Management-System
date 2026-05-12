@@ -5,10 +5,9 @@
 ![Database](https://img.shields.io/badge/Database-MySQL-blue)
 ![Build](https://img.shields.io/badge/Build-Maven-red)
 
-A backend application for managing property bookings, room inventory, guest information, and payment processing.  
-The system is built using **Spring Boot** and follows a clean **layered architecture** with secure authentication and REST APIs.
-
-This project simulates an enterprise-level booking platform where users can browse properties, manage guests, and complete bookings securely.
+An enterprise-grade property booking platform built with **Spring Boot**, featuring **JWT authentication**, 
+**Stripe payment integration**, and **dynamic pricing** using the Strategy Design Pattern. 
+Follows clean layered architecture with secure REST APIs and global exception handling.
 
 ---
 
@@ -173,14 +172,37 @@ util
 
 ## ▶ How to Run
 
-1 Clone repository
+### Prerequisites
+- Java 21 installed
+- MySQL installed and running
+- Maven installed
+- Stripe account (for payment testing)
+- Postman (optional, for API testing)
+
+### Steps
+
+1. Clone the repository
 git clone https://github.com/Zeeshan9980/Property-Booking-Management-System.git
 
-2 Configure database in
-application.properties
+2. Navigate to project directory
+cd Property-Booking-Management-System
 
-3 Run project
+3. Configure database
+- Create a MySQL database named `property_booking_db`
+- Open `src/main/resources/application.properties`
+- Update the following:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/property_booking_db
+spring.datasource.username=your_mysql_username
+spring.datasource.password=your_mysql_password
+jwt.secret=your_jwt_secret_key
+stripe.api.key=your_stripe_secret_key
+
+4. Run the project
 mvn spring-boot:run
+
+5. Access Swagger UI (API Documentation)
+http://localhost:8080/swagger-ui/index.html
 
 ---
 
