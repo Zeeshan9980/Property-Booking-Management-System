@@ -8,7 +8,7 @@
 		<version>4.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.capgemini</groupId>
+	<groupId>com.zeeshan</groupId>
 	<artifactId>property-booking-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PropertyBookingSystem</name>
